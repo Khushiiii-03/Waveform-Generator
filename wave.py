@@ -73,8 +73,6 @@ if run_button and selected_models:
         results.append((name, accuracy, precision))
 
         st.subheader(f" Classification Report: {name}")
-        target_names = ["Waveform 1", "Waveform 2", "Waveform 3"]
-        print(classification_report(y_test, y_pred, target_names=target_names))
         st.text(classification_report(y_test, y_pred))
 
         st.subheader(f" Confusion Matrix: {name}")
